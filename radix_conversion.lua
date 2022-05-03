@@ -18,28 +18,28 @@ radixNSymbols = {' ', '!', '"', '#', '$', '%', '&', '\'', '(', ')',
 				 
 -- Code stolen from StackOverflow to return the size of a table
 function getTableLng(tbl)
-  local getN = 0
-  for n in pairs(tbl) do 
-    getN = getN + 1 
-  end
-  return getN
+	local getN = 0
+	for n in pairs(tbl) do 
+		getN = getN + 1 
+	end
+	return getN
 end
 
 -- Code stolen from StackOverflow to get the index of a value in a table
 function indexOf(array, value)
-    for i, v in ipairs(array) do
-        if v == value then
-            return i
-        end
-    end
-    return nil
+	for i, v in ipairs(array) do
+		if v == value then
+			return i
+		end
+	end
+	return nil
 end
 
 radix = getTableLng(radixNSymbols)
 				 
 -- Convert decimal to radix-N, where N is the size of radixNSymbols
 function toRadixN(decNum)
-	radixNNum = {}
+radixNNum = {}
 	quotient = decNum
 	
 	while (quotient > 0)
